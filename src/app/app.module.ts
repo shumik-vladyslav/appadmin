@@ -11,6 +11,8 @@ import {AngularFireModule} from "angularfire2";
 import {KeysPipe} from "./shared/pipe/keys.pipe";
 import {DataListModule, DialogModule, ButtonModule, InputTextModule} from 'primeng/primeng';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {SignupComponent} from "./signup/signup.component";
+import {LoginComponent} from "./login/login.component";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBPL8CuFSt-dfyWeWD8mG9ld-Whp9RS6dU",
@@ -25,6 +27,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     NewestCasinosComponent,
+    LoginComponent,
+    SignupComponent,
     KeysPipe
   ],
   imports: [
