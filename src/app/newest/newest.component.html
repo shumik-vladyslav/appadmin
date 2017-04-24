@@ -1,0 +1,37 @@
+<div *ngIf="listing">
+  <div class="item-title">
+    <a [routerLink]="['/members']">Go Back</a>
+    <br>
+    <h2 class="page-header">{{listing.Name}}</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <img style="width:100%" class="thumbnail" src="{{imageUrl}}">
+      <a class="btn btn-default" [routerLink]="['/edit-newest/'+listing.$key]">Edit</a>
+      <a (click)="onDeleteClick()" class="btn btn-danger">Delete</a>
+    </div>
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li class="list-group-item">Record no.: {{listing.no}}</li>
+        <li class="list-group-item">Name: {{listing.Name}}</li>
+        <li class="list-group-item">URL: {{listing.URL}}</li>
+        <li class="list-group-item">Software: {{listing.Software}}</li>
+
+        <li class="list-group-item">Withdrawal Methods: {{listing.WithdrawalMethod}}</li>
+        <li class="list-group-item">Deposit methods: {{listing.Deposit}}</li>
+        <li class="list-group-item">Currencies: {{listing.Currencies}}</li>
+        <li class="list-group-item">Languages: {{listing.Languages}}</li>
+        <li class="list-group-item">Licenses: {{listing.Licenses}}</li>
+        <li class="list-group-item">Withdrawal Limit: {{listing.Withdrawal}}</li>
+        <li class="list-group-item">Banned Countries: {{listing.BannedCountries}}</li>
+        <li class="list-group-item">Casino Type: {{listing.CasinoType}}</li>
+        <li class="list-group-item">Return to Player: {{listing.ReturnToPlayer}}</li>
+        <li class="list-group-item">Allow manual flushing: {{listing.AllowManualFlushing}}</li>
+        <li class="list-group-item">Live Chat: {{listing.LiveChat}}</li>
+        <li class="list-group-item">Established: {{listing.Established}}</li>
+        <li class="list-group-item">Affiliate Program: {{listing.AffiliateProgram}}</li>
+        <li class="list-group-item">Contacts: {{listing.Contacts}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

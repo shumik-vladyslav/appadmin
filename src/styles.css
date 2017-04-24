@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+
+}
+.container-dashboard {
+  padding: 0 20px;
+}
+.table th {
+  border: 1px solid #ddd;
+  max-width: 200px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.table th.image,
+.table td.image {
+  min-width: 200px;
+}
+.table td.image .preview {
+  max-height: 150px;
+  overflow: hidden;
+}
+.panel {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+.panel-default>.panel-heading {
+  background: none;
+}
+
+.btn-add {
+  margin-bottom: 20px;
+}
+
+.item-title {
+  padding: 0 20px;
+}
+.edit-container {
+  padding: 0 20px 20px;
+
+}
+
+.navbar-default {
+  background: #000;
+  padding: 20px 25px 10px;
+  border: none;
+  border-radius: 0;
+}
+.navbar-default .navbar-brand {
+  font-size: 25px;
+  color: #ddd;
+  font-family: Verdana, Geneva, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login input {
+  background-color: #fff;
+  border-radius: 0px 3px 3px 0px;
+  color: #111;
+  margin-bottom: 1em;
+  padding: 0 16px;
+  height: 50px;
+
+  border: solid #111 1px;
+}
+
+.login button.basic-btn {
+  border: none !important;
+  background: #000 !important;
+  color: #fff !important;
+}
+.add-container {
+  padding: 0 20px 20px;
+}

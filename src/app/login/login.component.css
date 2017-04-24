@@ -22,16 +22,19 @@ button.basic-btn {
 }
 
 #fb {
+  background:#3B5998  no-repeat 14px 6px;
   background-size: 47px;
   color:#fff;
 }
 
 #google {
   border: 1px solid #95989A;
+  background: #fff   no-repeat 25px;
   background-size: 25px;
 }
 
 #email {
+  background: #ECECEC  no-repeat 25px;
   background-size: 25px;
 }
 

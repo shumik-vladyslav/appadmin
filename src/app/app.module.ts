@@ -13,6 +13,16 @@ import {DataListModule, DialogModule, ButtonModule, InputTextModule} from 'prime
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SignupComponent} from "./signup/signup.component";
 import {LoginComponent} from "./login/login.component";
+import {AuthGuard} from "./auth.service";
+import {CasinoNewsComponent} from "./casino-news/casino-news.component";
+import {NewestSlotsComponent} from "./newest-slots/newest-slots.component";
+import {RecommendedBonusesComponent} from "./recommended-bonuses/recommended-bonuses.component";
+import {MembersComponent} from "./members/members.component";
+import {AddNewestComponent} from "./add-newest/add-newest.component";
+import {NewestComponent} from "./newest/newest.component";
+import {EditNewestComponent} from "./edit-newest-component/edit-newest-component";
+import {NavbarComponent} from "./navbar/navbar.component";
+import {FirebaseService} from "./shared/firebase.service";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBPL8CuFSt-dfyWeWD8mG9ld-Whp9RS6dU",
@@ -26,9 +36,16 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    NewestCasinosComponent,
     LoginComponent,
     SignupComponent,
+    MembersComponent,
+    AddNewestComponent,
+    NewestComponent,
+    EditNewestComponent,
+    NavbarComponent,
+    RecommendedBonusesComponent,
+    NewestSlotsComponent,
+    CasinoNewsComponent,
     KeysPipe
   ],
   imports: [
@@ -44,7 +61,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   exports: [KeysPipe],
-  providers: [],
+  providers: [AuthGuard, FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

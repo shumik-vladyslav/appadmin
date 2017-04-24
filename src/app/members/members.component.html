@@ -1,0 +1,62 @@
+<div class="container-dashboard">
+  <a class="btn btn-danger btn-add" *ngIf="(af.auth | async)" [routerLink]="['/add-listing']">Add New Row</a>
+
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Newest Casinos</div>
+
+    <!-- Table -->
+    <table class="table">
+      <tr>
+        <th>Record no.</th>
+        <th>Name</th>
+        <th class="image">Image</th>
+        <th>URL</th>
+        <th>Software</th>
+        <th>Withdrawal Methods</th>
+        <th>Deposit methods</th>
+        <th>Currencies</th>
+        <th>Languages</th>
+        <th>Licenses</th>
+        <th>Withdrawal Limit</th>
+        <th>Banned Countries</th>
+        <th>Casino Type</th>
+        <th>Return to Player</th>
+        <th>Allow manual flushing</th>
+        <th>Live Chat</th>
+        <th>Established</th>
+        <th>Affiliate Program</th>
+        <th>Contacts</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let listing of listings | async">
+        <td>{{listing.no}}</td>
+        <td><a [routerLink]="['/members/'+listing.$key]">{{listing.Name}}</a></td>
+        <td class="image">
+          <div class="preview">
+            <img [src]="'https://firebasestorage.googleapis.com/v0/b/appadmin-3e908.appspot.com/o/listingimages%2F'+listing.image+'?alt=media&token=7fe3466c-8d33-471d-b5f1-559190bc1d94'" alt="">
+          </div>
+        </td>
+        <td>{{listing.URL}}</td>
+        <td>{{listing.Software}}</td>
+        <td>{{listing.WithdrawalMethod}}</td>
+        <td>{{listing.Deposit}}</td>
+        <td>{{listing.Currencies}}</td>
+        <td>{{listing.Languages}}</td>
+        <td>{{listing.Licenses}}</td>
+        <td>{{listing.Withdrawal}}</td>
+        <td>{{listing.BannedCountries}}</td>
+        <td>{{listing.CasinoType}}</td>
+        <td>{{listing.ReturnToPlayer}}</td>
+        <td>{{listing.AllowManualFlushing}}</td>
+        <td>{{listing.LiveChat}}</td>
+        <td>{{listing.Established}}</td>
+        <td>{{listing.AffiliateProgram}}</td>
+        <td>{{listing.Contacts}}</td>
+        <td><a class="btn btn-primary" [routerLink]="['/members/'+listing.$key]">Edit</a></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+

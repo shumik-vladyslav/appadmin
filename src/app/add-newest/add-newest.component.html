@@ -1,0 +1,86 @@
+<div class="add-container">
+  <a [routerLink]="['/members']">Back</a>
+  <br />
+  <h2 class="page-header">Add Listing</h2>
+  <form (submit)="onAddSubmit()">
+    <div class="form-group">
+      <label>no</label>
+      <input class="form-control" type="text" [(ngModel)]="no" name="no" required>
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" type="text" [(ngModel)]="Name" name="Name" required>
+    </div>
+    <div class="form-group">
+      <label>URL</label>
+      <input class="form-control" type="text" [(ngModel)]="URL" name="URL" required>
+    </div>
+    <div class="form-group">
+      <label>Software</label>
+      <input class="form-control" type="text" [(ngModel)]="Software" name="Software" required>
+    </div>
+    <div class="form-group">
+      <label>WithdrawalMethod</label>
+      <input class="form-control" type="text" [(ngModel)]="WithdrawalMethod" name="WithdrawalMethod" required>
+    </div>
+    <div class="form-group">
+      <label>Deposit</label>
+      <input class="form-control" type="text" [(ngModel)]="Deposit" name="Deposit" required>
+    </div>
+
+    <div class="form-group">
+      <label>Currencies</label>
+      <input class="form-control" type="text" [(ngModel)]="Currencies" name="Currencies" required>
+    </div>
+    <div class="form-group">
+      <label>Languages</label>
+      <input class="form-control" type="text" [(ngModel)]="Languages" name="Languages" required>
+    </div>
+    <div class="form-group">
+      <label>Licenses</label>
+      <input class="form-control" type="text" [(ngModel)]="Licenses" name="Licenses" required>
+    </div>
+    <div class="form-group">
+      <label>Withdrawal</label>
+      <input class="form-control" type="text" [(ngModel)]="Withdrawal" name="Withdrawal" required>
+    </div>
+    <div class="form-group">
+      <label>BannedCountries</label>
+      <input class="form-control" type="text" [(ngModel)]="BannedCountries" name="BannedCountries" required>
+    </div>
+    <div class="form-group">
+      <label>CasinoType</label>
+      <input class="form-control" type="text" [(ngModel)]="CasinoType" name="CasinoType" required>
+    </div>
+    <div class="form-group">
+      <label>ReturnToPlayer</label>
+      <input class="form-control" type="text" [(ngModel)]="ReturnToPlayer" name="ReturnToPlayer" required>
+    </div>
+    <div class="form-group">
+      <label>AllowManualFlushing</label>
+      <input class="form-control" type="text" [(ngModel)]="AllowManualFlushing" name="AllowManualFlushing" required>
+    </div>
+    <div class="form-group">
+      <label>LiveChat</label>
+      <input class="form-control" type="text" [(ngModel)]="LiveChat" name="LiveChat" required>
+    </div>
+    <div class="form-group">
+      <label>Established</label>
+      <input class="form-control" type="text" [(ngModel)]="Established" name="Established" required>
+    </div>
+    <div class="form-group">
+      <label>AffiliateProgram</label>
+      <input class="form-control" type="text" [(ngModel)]="AffiliateProgram" name="AffiliateProgram" required>
+    </div>
+    <div class="form-group">
+      <label>Contacts</label>
+      <input class="form-control" type="text" [(ngModel)]="Contacts" name="Contacts" required>
+    </div>
+
+    <div class="form-group">
+      <input id="image" name="image" [(ngModel)]="image" type="file" >
+    </div>
+    <input type="submit" value="submit" class="btn btn-success">
+  </form>
+
+</div>
